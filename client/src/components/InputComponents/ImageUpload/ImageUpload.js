@@ -6,16 +6,18 @@ const ImageUpload = (props) => {
   const [field, meta, helpers] = useField(props.name);
   const { uploadContainer, inputContainer, imgStyle } = props.classes;
   const onChange = (e) => {
-    const node = window.document.getElementById('imagePreview');
     const file = e.target.files[0];
     const imageType = /image.*/;
     if (!file.type.match(imageType)) {
       e.target.value = '';
     } else {
-      field.onChange(file);
+      helpers.setValue(file);
       const reader = new FileReader();
       reader.onload = () => {
-        node.src = reader.result;
+        const node = window.document.getElementById('imagePreview');
+        if (node) {
+          node.src = reader.result;
+        }
       };
       reader.readAsDataURL(file);
     }
@@ -28,12 +30,19 @@ const ImageUpload = (props) => {
           {...field}
           id="fileInput"
           type="file"
-          accept=".jpg, .png, .jpeg"
+          value={undefined}
+          accept=".jpg, .png, .jpeg, .gif"
           onChange={onChange}
         />
-        <label htmlFor="fileInput">Chose file</label>
+        <label htmlFor="fileInput">Choose file</label>
       </div>
-      <img id="imagePreview" className={classNames({ [imgStyle]: !!field.value })} alt="user" />
+        {field.value && (
+          <img
+            id='imagePreview'
+            className={classNames({ [imgStyle]: !!field.value })}
+            alt='user'
+          />
+        )}
     </div>
   );
 };
