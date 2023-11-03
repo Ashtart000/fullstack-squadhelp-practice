@@ -31,8 +31,6 @@ const FieldFileInput = (props) => {
         className={fileInput}
         id="fileInput"
         type="file"
-        accept=".jpg, .png, .jpeg, .gif"
-        multiple
         onChange={onChange}
       />
     </div>
