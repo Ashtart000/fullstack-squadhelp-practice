@@ -59,3 +59,45 @@ resourcesMenu.addEventListener('mouseout', () => {
         hiddenResources.style.display = 'none';
     }, 200)   
 });
+
+
+
+// questions menu
+
+const questionsTitle = document.querySelectorAll('.question-item-title');
+const hiddenItems = document.querySelectorAll('.question-hidden-item');
+const arrowsRight = document.querySelectorAll('.fa-arrow-right');
+const arrowsDown = document.querySelectorAll('.fa-arrow-down');
+
+questionsTitle.forEach((title, index) => {
+    title.addEventListener('click', () => {
+
+        hiddenItems.forEach((item, i) => {
+            if(i !== index) {
+                item.style.display = 'none'
+            }
+        })
+
+        arrowsRight.forEach((arrow, i) => {
+            if(i !== index) {
+                arrow.style.display = 'block'
+            } 
+        });
+
+        arrowsDown.forEach((arrow, i) => {
+            if(i !== index) {
+                arrow.style.display = 'none'
+            }
+        });
+
+        if (hiddenItems[index].style.display === 'block') {
+            hiddenItems[index].style.display = 'none';
+            arrowsRight[index].style.display = 'block';
+            arrowsDown[index].style.display = 'none';  
+        } else {
+            hiddenItems[index].style.display = 'block';
+            arrowsRight[index].style.display = 'none';
+            arrowsDown[index].style.display = 'block';  
+        }
+    })  
+})
