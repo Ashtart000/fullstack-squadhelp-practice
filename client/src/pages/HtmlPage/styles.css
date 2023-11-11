@@ -730,13 +730,13 @@ body {
 
 .consultation-section {
     display: flex;
-    margin: 120px auto;
+    margin: 110px auto;
 }
 
 .consultation-left {
     flex: 3;
     box-shadow: 0 10px 40px 10px rgba(140,152,164,.175);
-    padding: 70px 60px;
+    padding: 70px 50px;
 }
 
 .consultation-left-item-wrapper {
@@ -830,4 +830,40 @@ body {
     color: var(--light-menu-item-color);
 }
 
+
+
+/* Brand section */
+
+.brand-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-text {
+    margin-left: 20px 0 60px;
+    font-size: 28px;
+}
+
+.brand-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.brand-images::before {
+    content: '';
+    height: 0.3px;
+    width: 100%;
+    background-color: var(--light-grey-color);
+    position: absolute;
+    right: -15px;
+    top: -20px;
+}
+
+.brand-images img {
+    width: 96px;
+    margin:  15px 55px;
+}
 
