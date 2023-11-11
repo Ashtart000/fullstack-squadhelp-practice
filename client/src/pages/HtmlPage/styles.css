@@ -5,6 +5,7 @@
     --secondary-dark-text-color: #4a4a4a;
     --secondary-light-text-color: #77838f;
     --hero-color: #377dff;
+    --hover-to-hero-color: #0052ea;
     --header-color: #0f2e60;
     --box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.07);
     --dropdown-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
@@ -686,7 +687,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0 60px;
+    padding: 0 50px;
     position: relative;
 }
 
@@ -721,6 +722,112 @@ body {
     position: absolute;
     right: -15px;
     top: 30%;
+}
+
+
+
+/* Consultation section */
+
+.consultation-section {
+    display: flex;
+    margin: 120px auto;
+}
+
+.consultation-left {
+    flex: 3;
+    box-shadow: 0 10px 40px 10px rgba(140,152,164,.175);
+    padding: 70px 60px;
+}
+
+.consultation-left-item-wrapper {
+    display: flex;
+}
+
+.consultation-round-item {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(55,125,255,.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.fa-angle-right {
+    font-size: 10px;
+    color: var(--hero-color);
+}
+
+.consultation-left-text {
+    max-width: 90%;   
+}
+
+.consultation-left-item-wrapper:first-child .consultation-left-text {
+    border-bottom: 0.3px solid var(--light-grey-border-color);
+    margin-bottom: 30px;
+}
+
+.left-text-title-first {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.left-text-common {
+    margin-top: 5px;
+    font-size: 14px;
+    color: var(--secondary-light-text-color);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.left-text-common a {
+    color: var(--hero-color);
+}
+
+.left-text-common a:hover {
+    color: var(--hover-to-hero-color);
+}
+
+.left-text-title-second {
+    font-size: 24px;
+}
+
+.concultation-right {
+    flex: 2.6;
+    background-color: var(--hero-color);
+    color: var(--white-color);
+}
+
+.consultation-right-item-wrapper {
+    padding: 70px 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.right-text-title {
+    font-size: 32px;
+}
+
+.right-text-common {
+    font-size: 14px;
+}
+
+.consultation-button {
+    background-color: var(--white-color);
+    color: var(--hero-color);
+    border-radius: 30px;
+    margin: 10px 0 10px 0;
+}
+
+.consultation-button:hover  {
+    box-shadow: 0 3px 6px 0 rgba(140,152,164,.25);
+}
+
+.consultation-phone:hover {
+    color: var(--light-menu-item-color);
 }
 
 
