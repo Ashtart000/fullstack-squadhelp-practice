@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Field, Form, Formik } from 'formik';
 import { connect } from 'react-redux';
-import { addEvent, removeEvent } from '../../actions/actionCreator';
+import { addEvent } from '../../actions/actionCreator';
 import moment from 'moment';
 
 const EventsForm = (props) => {
-    const { events, addEvent, removeEvent } = props;
+    const { events, addEvent} = props;
 
     const initialValues = {
         eventName: '',
@@ -28,15 +28,6 @@ const EventsForm = (props) => {
 
     return (
         <>
-            <ul>
-                {events.length > 0 ?
-                events.map((event, index) => (
-                <li key={index}>
-                    {event.name} - {event.date} {event.time}
-                </li>
-                )) :
-                <div>NO EVENTS YET</div>}
-            </ul>
             <h3>EVENT FORM</h3>
             <Formik initialValues={initialValues} onSubmit={onSubmit}>
                 {(props) => (
