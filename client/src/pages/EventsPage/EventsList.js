@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import EventsListItem from './EventsListItem';
 import { removeEvent } from '../../actions/actionCreator';
+import styles from './EventsPage.module.scss';
 
 const EventsList = (props) => {
     const { events, removeEvent } = props;
@@ -21,9 +22,19 @@ const EventsList = (props) => {
     }
 
     return (
-        <div>
-            {sortedEvents.length > 0 ? renderEvents() : <h3>NO EVENTS YET</h3>}
-        </div>
+        <section className={styles.eventListContainer}>
+            <div className={styles.eventListTitleWrapper}> 
+                <h2>Live upcomming checks</h2>
+                <div className={styles.eventTitleClock}>
+                    <p>Remaining time</p>
+                    <i class="far fa-clock"></i>
+                </div>
+            </div>          
+            <div className={styles.eventListItemContainer}>
+                {sortedEvents.length > 0 ? renderEvents() : <p>No events yet</p>}
+            </div>
+        </section>
+
     );
 }
 

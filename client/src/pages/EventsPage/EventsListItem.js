@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+import classNames from 'classnames';
+import styles from './EventsPage.module.scss';
 
 const EventsListItem = (props) => {
     const {event, onDelete} = props;
@@ -25,13 +27,17 @@ const EventsListItem = (props) => {
     const [days, hours, minutes, seconds] = remainingValues(remainingTime);
 
     return (
-        <div>
-            {event.name} - {event.date} - 
-            {days > 0 && `${days} days, `}
-            {hours > 0 && `${hours} hours, `}
-            {minutes > 0 && `${minutes} minutes, `}
-            {seconds > 0 && `${seconds} seconds`}
-            <button onClick={onDelete}>Delete</button>
+        <div className={styles.eventListItem}>
+            <div className={styles.eventName}>
+                {event.name} 
+            </div>
+            <div className={styles.eventRemainingTime}>
+                {days > 0 && `${days}d `}
+                {hours > 0 && `${hours}h `}
+                {minutes > 0 && `${minutes}m `}
+                {seconds > 0 && `${seconds}s`}              
+            </div>
+            <button onClick={onDelete}>X</button>          
         </div>
     );
 }

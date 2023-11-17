@@ -1,0 +1,88 @@
+.eventListContainer {
+    margin-top: 50px;
+    width: 75vw;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.eventListTitleWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ebebeb;
+    padding: 10px;
+
+    h2 {
+        font-size: 30px;
+        color: #4e618d;
+    }
+}
+
+.eventTitleClock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #718888;
+    font-size: 14px;
+
+    i {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+}
+
+
+.eventListItemContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+
+    p {
+        margin-left: 10px;
+    }
+}
+
+.eventListItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ebebeb;
+    padding: 10px;
+    font-size: 20px;
+    position: relative;
+
+    button {
+        background-color: #4e618d;
+        border-radius: 10px;
+        border: none;
+        color: #ffffff;
+        position: absolute;
+        right: -40px;
+    }
+
+    button:hover {
+        background-color: #ffffff;
+        border: 1px solid #4e618d;
+        color: #4e618d;
+    }
+}
+
+.eventName {
+    max-width: 60vw;
+    word-wrap: break-word;
+}
+
+.eventRemainingTime {
+    font-size: 14px;
+    color: #718888;
+    margin-left: 10px;
+}
+
+
+
+

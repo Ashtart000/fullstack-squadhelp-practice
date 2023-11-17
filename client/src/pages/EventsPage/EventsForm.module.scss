@@ -1,0 +1,77 @@
+.formContainer {
+    margin-top: 50px;
+    width: 75vw;
+    margin: 50px auto;
+    border: 1px solid #ebebeb;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        padding: 10px;
+        font-size: 16px;
+
+        h3 {
+            font-size: 24px;
+            color: #4e618d;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #4e618d;
+            border-radius: 5px;
+        }
+    }
+}
+
+.fieldName {
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+        
+    }
+}
+
+.fieldDate {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    input {
+        width: 30%;
+    }
+}
+
+.formButtons {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        padding: 10px 30px;
+        border-radius: 5px;
+        font-weight: 500;
+        border: 2px solid #4e618d;
+    }
+}
+
+.formButtons button:first-child {
+    border: 2px solid #4e618d;
+    color: #4e618d;
+
+    &:hover{
+        background-color: #4e618d;
+        color: #fff;
+    }
+}
+
+.formButtons button:last-child {
+    background-color: #4e618d;
+    color: #fff;
+
+    &:hover{
+        background-color: #fff;
+        color: #4e618d;
+    }
+}
