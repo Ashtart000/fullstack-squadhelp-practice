@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import EventsListItem from './EventsListItem';
 
 const EventsList = ({events}) => {
 
@@ -9,17 +10,16 @@ const EventsList = ({events}) => {
             return dateA - dateB;
         });
 
+    const renderEvents = () => {
+        return sortedEvents.map((event) => <EventsListItem 
+        event={event}
+        key={event.id}
+        />)
+    }
+
     return (
         <div>
-            <ul>
-                {sortedEvents.length > 0 ?
-                sortedEvents.map((event, index) => (
-                <li key={index}>
-                    {event.name} - {event.date} {event.time}
-                </li>
-                )) :
-                <div>NO EVENTS YET</div>}
-            </ul>
+            {sortedEvents.length > 0 ? renderEvents() : <h3>NO EVENTS YET</h3>}
         </div>
     );
 }

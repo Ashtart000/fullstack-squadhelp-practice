@@ -2,7 +2,6 @@ import React from 'react';
 import { Field, Form, Formik } from 'formik';
 import { connect } from 'react-redux';
 import { addEvent } from '../../actions/actionCreator';
-import moment from 'moment';
 
 const EventsForm = (props) => {
     const { events, addEvent} = props;
