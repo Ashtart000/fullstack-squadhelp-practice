@@ -15,7 +15,7 @@ export default function (state = initialState, action) {
         case ACTION.REMOVE_EVENT: {
             return {
                 ...state,
-                events: state.events.filter(event => event.id !== action.payload)
+                events: state.events.filter(event => event.id !== action.data.id)
             }
         }
         default:

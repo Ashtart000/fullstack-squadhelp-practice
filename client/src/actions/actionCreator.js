@@ -298,6 +298,7 @@ export const addEvent = (data) => ({
   data,
 });
 
-export const removeEvent = () => ({
+export const removeEvent = (data) => ({
   type: ACTION.REMOVE_EVENT,
-})
+  data,
+});

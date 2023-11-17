@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 const EventsListItem = (props) => {
-    const {event} = props;
+    const {event, onDelete} = props;
 
     const eventEndTime = new Date(`${event.date} ${event.time}`);
     const [remainingTime, setRemainingTime] = useState(eventEndTime - new Date())
@@ -11,7 +11,7 @@ const EventsListItem = (props) => {
             setRemainingTime(eventEndTime - new Date())
         }, 1000);
         return () => clearInterval(timer);
-    }, [])
+    }, [eventEndTime])
 
     const remainingValues = (remainingTime) => {
         const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
@@ -31,6 +31,7 @@ const EventsListItem = (props) => {
             {hours > 0 && `${hours} hours, `}
             {minutes > 0 && `${minutes} minutes, `}
             {seconds > 0 && `${seconds} seconds`}
+            <button onClick={onDelete}>Delete</button>
         </div>
     );
 }
