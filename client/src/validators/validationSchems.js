@@ -66,4 +66,10 @@ export default {
   CatalogSchema: yup.object({
     catalogName: yup.string().test('test-catalogName', 'required', (value) => value && value.trim().length >= 1).required('required'),
   }),
+  EventSchema: yup.object({
+    eventName: yup.string().min(3, 'min 3 symbols').required('required'),
+    eventDate: yup.date().required('required').min(new Date(), 'must be greater than the current date'),
+    eventTime: yup.mixed().required('required'),
+    eventNotifyIn: yup.number().min(1, '1 minute minimum').max(30240, '30240 minutes maximum').required('required'),
+  })
 };
