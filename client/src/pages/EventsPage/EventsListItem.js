@@ -27,21 +27,25 @@ const EventsListItem = (props) => {
     const [days, hours, minutes, seconds] = remainingValues(remainingTime);
 
     const timeToNotice = Math.max(remainingTime - (event.notifyIn * 60 * 1000), 0);
-    console.log(timeToNotice)
 
     useEffect(() => {
         if (timeToNotice > 0 && timeToNotice < (3*7*24*60*60*1000)) {  // 30240 in minutes
             const noticeTimer = setTimeout(() => {
                 toast.info(`Time to ${event.name}!`, {
-                    position: toast.POSITION.TOP_CENTER,
                     autoClose: 15000, 
+                    hideProgressBar: false,
+                    style: { background: 'red' },
                 });
             }, timeToNotice);
             return () => clearTimeout(noticeTimer);
         }
     }, [timeToNotice, event.name]);
 
-    const fillWidth = `${100 - (remainingTime / (1000 * 60 * 60))}%`;
+    //max 100h or 100m
+    const remainingWidhtInHours = Math.ceil(remainingTime / (1000 * 60 * 60));
+    // const remainingWidhtInMinutes = Math.ceil(remainingTime / (1000 * 60)) > 100 ? 100 : Math.ceil(remainingTime / (1000 * 60))
+
+    const fillWidth = `${100 - remainingWidhtInHours}%`;
 
     return (
         <div className={styles.eventListItem}>
