@@ -3,10 +3,15 @@ import classNames from 'classnames';
 import styles from './ButtonGroup.Module.scss';
 
 const OneButton = (props) => {
+    const buttonClasses = classNames(
+        styles.oneButtonWrapper,
+        { [styles.clicked]: props.isSelected }
+    );
+
     return (
-        <div className={styles.oneButtonWrapper}>
-          <button>{props.action}</button> 
-          <p>{props.text}</p> 
+        <div className={buttonClasses} onClick={() => props.onClick(props.btnKey)}>
+          <button>{props.btnText}</button> 
+          <p>{props.btnDescription}</p> 
         </div>
     );
 }
