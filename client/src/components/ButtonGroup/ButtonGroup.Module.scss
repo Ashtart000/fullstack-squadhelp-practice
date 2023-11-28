@@ -1,0 +1,40 @@
+.buttonGroupWrapper {
+    padding: 10px 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.oneButtonWrapper {
+    flex: 1;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    margin: 0 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #585859;
+    white-space: pre-line;
+
+    &:hover,
+    &:active {
+        border: 2px solid #28d2d0;
+        color: #333333;
+    
+        button {
+          background-color: #28d2d0;
+        }
+      }
+
+    button {
+        border-radius: 20px;
+        border: none;
+        background-color: #888;
+        padding: 5px 10px;
+        width: 50px;
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+}
