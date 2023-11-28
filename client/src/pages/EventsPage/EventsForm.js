@@ -50,7 +50,7 @@ const EventsForm = (props) => {
                                 <ErrorMessage name='eventTime' component='p' className={styles.formErrorMessage}/>
                             </div>
                             <div>
-                                <Field type='number' name='eventNotifyIn' placeholder='Notify in (minutes)' min="1"/>
+                                <Field type='number' name='eventNotifyIn' placeholder='Notify in (min)' min="1"/>
                                 <ErrorMessage name='eventNotifyIn' component='p' className={styles.formErrorMessage}/> 
                             </div>
                         </div>

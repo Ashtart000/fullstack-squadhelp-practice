@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import EventsListItem from './EventsListItem';
 import { removeEvent } from '../../actions/actionCreator';
-import styles from './EventsPage.module.scss';
+import styles from './EventsList.module.scss';
 
 const EventsList = (props) => {
     const { events, removeEvent } = props;

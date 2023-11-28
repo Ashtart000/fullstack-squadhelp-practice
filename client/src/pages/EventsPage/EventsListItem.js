@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { toast } from 'react-toastify';
-import styles from './EventsPage.module.scss';
+import styles from './EventsListItem.module.scss';
 
 const EventsListItem = (props) => {
     const {event, onDelete} = props;
