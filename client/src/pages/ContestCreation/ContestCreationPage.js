@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { connect } from 'react-redux';
 import styles from './ContestCreationPage.module.sass';
 import { saveContestToStore, clearDataForContest } from '../../actions/actionCreator';
@@ -13,6 +13,11 @@ import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
 const ContestCreationPage = (props) => {
   const formRef = useRef();
   const contestData = props.contestStore.contests[props.contestType] ? props.contestStore.contests[props.contestType] : { contestType: props.contestType };
+  const [selectedButton, setSelectedButton] = useState(null);
+
+  const handleBtnClick = (btnKey) => {
+      setSelectedButton((prevSelected) => (prevSelected === btnKey ? null : btnKey));
+  };
 
   const handleSubmit = (values) => {
     props.saveContest({ type: props.contestType, info: values });
@@ -43,7 +48,12 @@ const ContestCreationPage = (props) => {
         <ProgressBar currentStep={2} />
       </div>
       
-      <ButtonGroup contestType={props.contestType}/>
+      <ButtonGroup 
+        contestType={props.contestType}
+        selectedButton={selectedButton}
+        onBtnClick={handleBtnClick}
+        size="large" 
+      />
 
       <div className={styles.container}>
         <div className={styles.formContainer}>
@@ -55,6 +65,14 @@ const ContestCreationPage = (props) => {
           />
         </div>
       </div>
+
+      <ButtonGroup 
+        contestType={props.contestType}
+        selectedButton={selectedButton}
+        onBtnClick={handleBtnClick}
+        size="small" 
+      />
+
       <div className={styles.footerButtonsContainer}>
         <div className={styles.lastContainer}>
           <div className={styles.buttonsContainer}>

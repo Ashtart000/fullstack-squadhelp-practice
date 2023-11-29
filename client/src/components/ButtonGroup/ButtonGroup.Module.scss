@@ -1,21 +1,41 @@
 .buttonGroupWrapper {
-    padding: 10px 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px 20px 20px;
     display: flex;
     justify-content: space-between;
+    gap: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    white-space: pre-line;
+
+    @media (max-width: 1300px) {
+        max-width: 1000px;
+    }
+}
+
+.buttonGroupWrapperSmall {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 25px 20px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
 }
 
 .oneButtonWrapper {
     flex: 1;
     border: 1px solid #ebebeb;
     border-radius: 5px;
-    margin: 0 20px;
     padding: 20px;
     text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.5;
+
     color: #585859;
-    white-space: pre-line;
+    
 
     &:hover,
     &:active,
