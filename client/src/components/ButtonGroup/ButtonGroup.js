@@ -11,21 +11,18 @@ const ButtonGroup = ({ contestType, selectedButton, onBtnClick, size }) => {
             <div className={buttonGroupStyles}>
                 <OneButton 
                     btnKey={1}
-                    btnText={'Yes'} 
                     btnDescription={'The Domain should exactly match the name'}
                     onClick={onBtnClick}
                     isSelected={selectedButton === 1}
                 />
                 <OneButton 
                     btnKey={2}
-                    btnText={'Yes'} 
                     btnDescription={'But minor variations are allowed\n(Recommended)'}
                     onClick={onBtnClick}
                     isSelected={selectedButton === 2}
                 />
                 <OneButton 
                     btnKey={3}
-                    btnText={'No'} 
                     btnDescription={'I am only looking for a name, not a Domain'}
                     onClick={onBtnClick}
                     isSelected={selectedButton === 3}
