@@ -6,11 +6,11 @@ import CONSTANTS from '../../constants';
 import { getUserAction, clearUserStore, headerRequest } from '../../actions/actionCreator';
 
 class Header extends React.Component {
-  componentDidMount() {
-    if (!this.props.data) {
-      this.props.getUser();
+    componentDidMount() {
+      if (!this.props.data) {
+        this.props.getUser();
+      }
     }
-  }
 
     logOut = () => {
       localStorage.clear();
@@ -133,9 +133,8 @@ class Header extends React.Component {
                       <li><a href="http://www.google.com">LEADERBOARD</a></li>
                       <li className={styles.last}>
                         <a href="http://www.google.com">
-                            BECOME A
-                            CREATIVE
-</a>
+                            BECOME A CREATIVE
+                        </a>
                       </li>
                     </ul>
                   </li>
@@ -165,9 +164,8 @@ class Header extends React.Component {
                       <li><a href="http://www.google.com">VISUAL NAME SEARCH</a></li>
                       <li className={styles.last}>
                         <a href="http://www.google.com">
-                            SELL YOUR
-                            DOMAINS
-</a>
+                            SELL YOUR DOMAINS
+                        </a>
                       </li>
                     </ul>
                   </li>

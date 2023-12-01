@@ -6,7 +6,12 @@ import CreatorDashboard from '../../components/CreatorDashboard/CreatorDashboard
 import Header from '../../components/Header/Header';
 
 const Dashboard = (props) => {
+  if (props.role == null) {
+    props.history.replace('/login');
+  }
+
   const { role, history } = props;
+
   return (
     <div>
       <Header />
