@@ -114,8 +114,7 @@ module.exports.payment = async (req, res, next) => {
     '') }' AND "cvc"='${ req.body.cvc }' AND "expiry"='${ req.body.expiry }'
                 THEN "balance"-${ req.body.price }
             WHEN "cardNumber"='${ CONSTANTS.SQUADHELP_BANK_NUMBER }' AND "cvc"='${ CONSTANTS.SQUADHELP_BANK_CVC }' AND "expiry"='${ CONSTANTS.SQUADHELP_BANK_EXPIRY }'
-                THEN "balance"+${ req.body.price } 
-                ELSE "balance"
+                THEN "balance"+${ req.body.price }                 
                 END
         `),
     },
