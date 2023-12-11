@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Route } from 'react-router-dom';
 import { selectBundle } from '../../actions/actionCreator';
 import BundleBox from '../../components/BundleBox/BundleBox';
 import CONSTANTS from '../../constants';
@@ -10,9 +9,11 @@ import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import Header from '../../components/Header/Header';
 
 const StartContestPage = (props) => {
-  if (props.userStore.data == null || props.userStore.data.role !== CONSTANTS.CUSTOMER) {
-    props.history.replace('/login');
-  };
+  useEffect(() => {
+    if (props.userStore.data.role !== CONSTANTS.CUSTOMER) {
+      props.history.replace('/');
+    };
+  }, [])
 
   const setBundle = (bundleStr) => {
     const array = bundleStr.toLowerCase().split('+');
