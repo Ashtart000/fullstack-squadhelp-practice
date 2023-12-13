@@ -184,8 +184,11 @@ const resolveOffer = async (
       arrayRoomsId.push(offer.userId);
     }
   });
-  controller.getNotificationController().emitChangeOfferStatus(arrayRoomsId,
+  if(arrayRoomsId.length > 0) {
+    controller.getNotificationController().emitChangeOfferStatus(arrayRoomsId,
     'Someone of yours offers was rejected', contestId);
+  }
+  console.log(`THIS IS ARRAY ${arrayRoomsId}`);
   controller.getNotificationController().emitChangeOfferStatus(creatorId,
     'Someone of your offers WIN', contestId);
   return updatedOffers[ 0 ].dataValues;
