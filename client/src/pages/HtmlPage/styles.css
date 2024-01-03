@@ -6,6 +6,7 @@
     --secondary-light-text-color: #77838f;
     --hero-color: #377dff;
     --hover-to-hero-color: #0052ea;
+    --hover-to-menu: #2874f0;
     --header-color: #0f2e60;
     --box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.07);
     --dropdown-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
@@ -97,12 +98,20 @@ body {
     position: relative;
 }
 
-.header-icons-account:hover, .header-icons-contact:hover, .header-icons-favorite:hover {
+.header-icons-account:hover .user-icon, 
+.header-icons-contact:hover .phone-icon, 
+.header-icons-favorite:hover .heart-icon {
     color: var(--white-color);
 }
 
-.fa-user, .fa-phone, .fa-heart {
+/* .fa-user, .fa-phone, .fa-heart {
     font-size: 14px;
+} */
+
+.user-icon, .phone-icon, .heart-icon {
+    color: var(--light-menu-item-color);
+    width: 14px;
+    height: 14px;
 }
 
 .header-icons button {
@@ -134,10 +143,14 @@ body {
     z-index: 9;
 }
 
+.hidden-menu p {
+    font-size: 14px;
+}
+
 .hidden-account, .hidden-contact {
     top: 40px;
-    left: -40px;
-    width: 170px;
+    left: -50px;
+    width: 180px;
     padding: 30px 20px;
     font-weight: 600;
 }
@@ -147,7 +160,7 @@ body {
 }
 
 .hidden-account a:hover, .hidden-contact a:hover {
-    color: var(--hero-color)
+    color: var(--hover-to-hero-color)
 }
 
 /* .header-icons-account:hover .hidden-account {
@@ -171,10 +184,10 @@ body {
 }
 
 .hidden-contact p {
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
-.hidden-contact i {
+/* .hidden-contact i {
     color: var(--light-grey-color);
     font-size: 18px;
 }
@@ -184,6 +197,20 @@ body {
 }
 
 .hidden-contact i:hover + a {
+    color: var(--hero-color);
+} */
+
+.hidden-icon {
+    color: var(--light-grey-color);
+    width: 20px;
+    height: 20px;
+}
+
+.hidden-icon:hover {
+    color: var(--hover-to-menu);
+}
+
+.hidden-contact .hidden-icon:hover + a {
     color: var(--hero-color);
 }
 
@@ -1003,6 +1030,10 @@ footer {
     margin-left: 10px;
 }
 
+.footer-button-text:hover {
+    color: var(--hover-to-hero-color);
+}
+
 
 
 
@@ -1013,6 +1044,19 @@ footer {
     justify-content: space-between;
     gap: 30px;
     padding: 50px;
+}
+
+.footer-copyright p {
+    font-weight: 600;
+    text-align: center;
+}
+
+.footer-copyright a {
+    cursor: pointer;
+}
+
+.footer-copyright a:hover {
+    color: var(--hover-to-hero-color);
 }
 
 .footer-social-icon {
