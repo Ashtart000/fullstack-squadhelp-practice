@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import moment from 'moment';
 import styles from './ContestSideBar.module.sass';
 import CONSTANTS from '../../constants';
@@ -62,6 +63,9 @@ const ContestSideBar = (props) => {
           </div>
         </div>
         )}
+      <div className={styles.button}>
+        <Link className={styles.button__link} to="/dashboard">DASHBOARD</Link>
+      </div>
       </div>
     );
   };
