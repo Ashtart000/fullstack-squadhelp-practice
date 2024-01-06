@@ -11,13 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Poppins&family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <header class="header">
         <div class="header-nav-top-wrapper">
-            <nav class="header-nav-top nav-container-top">
+            <nav class="header-nav-top nav-container">
                 <a href="#"><img src="./images/logo_white.svg" alt="logo"/></a>
                 <div class="search-bar">
                     <input type="text" placeholder="Search over 100,000 names" class="search-input">
@@ -41,7 +42,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p>Account</p>
+                        <p class="hidden">Account</p>
                         <div class="hidden-menu hidden-account">
                             <a href="#"><p>Login</p></a>
                             <a href="#"><p>Signup</p></a>
@@ -53,7 +54,7 @@
                             <path d="M12.8766 9.1894C12.0195 9.1894 11.1779 9.05534 10.3804 8.79178C9.98958 8.65849 9.50917 8.78077 9.27066 9.02573L7.6965 10.2141C5.87092 9.23956 4.7464 8.11541 3.78521 6.30354L4.93857 4.77039C5.23822 4.47114 5.3457 4.03401 5.21693 3.62385C4.95224 2.82213 4.81779 1.98093 4.81779 1.12343C4.81782 0.503964 4.31386 0 3.69443 0H1.12339C0.503964 0 0 0.503964 0 1.12339C0 8.22365 5.77638 14 12.8766 14C13.4961 14 14 13.496 14 12.8766V10.3127C14 9.69336 13.496 9.1894 12.8766 9.1894Z">
                             </path>
                         </svg>
-                        <p>Contact</p>
+                        <p class="hidden">Contact</p>
                         <div class="hidden-menu hidden-contact">
                             <div>
                                 <!-- <i class="fas fa-phone"></i> -->
@@ -97,7 +98,7 @@
                         <svg class="heart-icon" width="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.5948 4.49911L12 5.05935L12.4051 4.49913C12.8296 3.91225 13.3075 3.41423 13.8304 3.00973C14.8616 2.21233 16.0232 1.8125 17.2956 1.8125C19.0111 1.8125 20.5819 2.49751 21.7285 3.74103C22.8632 4.97189 23.5 6.66666 23.5 8.52502C23.5 10.4113 22.8038 12.1602 21.2348 14.0533L21.2348 14.0533C19.8158 15.7656 17.7661 17.5144 15.3373 19.5842L15.3372 19.5842L15.3165 19.6019C14.4958 20.3014 13.5646 21.0951 12.5983 21.9401L12.598 21.9404C12.433 22.0848 12.2206 22.1648 12 22.1648C11.7794 22.1648 11.5671 22.0849 11.4016 21.94L11.4013 21.9397C10.4279 21.0887 9.49075 20.29 8.66603 19.587L8.66332 19.5847L8.66329 19.5847C6.2341 17.5146 4.18441 15.7657 2.76535 14.0535C1.19634 12.1602 0.5 10.4113 0.5 8.52521C0.5 6.66666 1.1368 4.97189 2.27135 3.74103C3.41786 2.49752 4.98889 1.8125 6.70441 1.8125C7.97679 1.8125 9.1384 2.21234 10.1694 3.00971L10.1694 3.00973C10.6925 3.41421 11.1706 3.91241 11.5948 4.49911Z" stroke="none"></path>
                         </svg>
-                        <p>Favorites</p>
+                        <p class="hidden">Favorites</p>
                     </div>
                     <button>Start Contest</button>
                 </div>
@@ -105,7 +106,7 @@
         </div>
 
         <div class="header-nav-bottom-wrapper">
-            <nav class="header-nav-bottom nav-container-bottom">
+            <nav class="header-nav-bottom nav-container">
                 <div class="header-nav-bottom-item">
                     <a href="#" class="header-nav-bottom-menu">
                         Names For Sale
@@ -844,7 +845,7 @@
     </footer> -->
 
     <footer class="footer">
-        <section class="footer-menu main-container">
+        <section class="footer-menu footer-container">
             <div class="footer-menu-list">
                 <p class="footer-menu-list-title">
                     Services
@@ -933,7 +934,7 @@
             </div>
         </section>
 
-        <section class="footer-search main-container">
+        <section class="footer-search footer-container">
             <p class="footer-search-title footer-menu-list-title">
                 Trending Searches
             </p>
@@ -990,8 +991,8 @@
 
         </section>
 
-        <section class="footer-copyright main-container">
-            <p>Copyright © 2023 Squadhelp Inc</p>
+        <section class="footer-copyright footer-container">
+            <p class="copyright-year">Copyright © 2023 Squadhelp Inc</p>
             <a href="#">
                 <p>
                     Squadhelp.com has a Shopper Approved rating of<br> 4.9/5 based on 2782 ratings 

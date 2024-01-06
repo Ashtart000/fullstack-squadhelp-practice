@@ -1,5 +1,4 @@
 @import './reset.css';
-@import './media.css';
 
 :root {
     --primary-text-color: #1e2022;
@@ -40,9 +39,10 @@ body {
     background-color: var(--header-color);
 }
 
-.nav-container-top {
+.nav-container {
     max-width: 1188px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .header-nav-top {
@@ -58,7 +58,7 @@ body {
     /* width: 310px; */
     flex: 1;
     padding: 0 12px;
-    margin: 0 60px 0 45px;
+    margin: 0 48px;
     border: 1px solid #ebebeb;
     border-radius: 8px;
     background-color: var(--white-color);
@@ -90,8 +90,8 @@ body {
     gap: 15px;
     font-size: 12px;
     font-weight: 700;
-    margin: 0 15px;
     position: relative;
+    margin: 0 15px;
 }
 
 .header-icons-account, .header-icons-contact, .header-icons-favorite {
@@ -123,6 +123,7 @@ body {
     border: 1px solid var(--white-color);
     border-radius: 5px;
     padding: 10px 8px;
+    margin-left: 5px;
     transition: all 0.2s ease-in-out;
     color: inherit;
     font-size: 13px;
@@ -227,16 +228,11 @@ body {
     box-shadow: var(--box-shadow);
 }
 
-.nav-container-bottom {
-    max-width: 1188px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
 .header-nav-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 36px;
     position: relative;
 }
 
@@ -896,6 +892,12 @@ body {
 
 footer {
     background-color: var(--footer-color);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .footer-menu {
