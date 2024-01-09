@@ -5,14 +5,6 @@
 --breakpoint-xl: 1200px; */
 
 @media (max-width: 1000px) {
-    .footer-copyright {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    .footer-social-icon {
-        gap: 25px;
-    }
     .header-icons .hidden, .header-icons button {
         display: none;
     }
@@ -22,6 +14,9 @@
         width: 180px;
         padding: 30px 20px;
         font-weight: 600;
+    }
+    .header-nav-bottom {
+        flex-wrap: wrap;
     }
     .hero-section {
         flex-direction: column;
@@ -38,14 +33,48 @@
         width: 106%;
         margin-left: -55px;
     }
+    .question-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .consultation-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .brand-text {
+        width: 45%;
+    }
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .footer-menu {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .footer-menu-list, .footer-menu-list:last-child {
+        flex: 40%;
+    }
+    .footer-menu-list:last-child {
+        margin-bottom: 50px;
+    }
+    .footer-menu-list:last-child div {
+        margin-bottom: 15px;
+    }
+    .footer-copyright {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .footer-social-icon {
+        gap: 25px;
+    }
 }
 
 @media (max-width: 1200px) {
     .main-container {
         max-width: 970px;
-    }
-    .brand-images {
-        flex-wrap: nowrap;
     }
     .brand-images img {
         margin:  15px 35px;

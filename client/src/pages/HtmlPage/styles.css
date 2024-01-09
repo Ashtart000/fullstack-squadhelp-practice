@@ -232,43 +232,44 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 36px;
     position: relative;
 }
 
 .header-nav-bottom-item {
     position: relative;
-    padding: 15px 0;
+    padding: 8px 20px;
 }
 
-.header-nav-bottom a:hover {
-    color: var(--hero-color);
+.header-nav-bottom-item:hover, .header-nav-bottom a:hover  {
+    color: var(--hover-to-hero-color);
 }
 
-.fa-chevron-down {
+.nav-arrow-down, .nav-arrow-down-right {
     display: inline;
     margin-left: 5px;
+    fill: var(--secondary-dark-text-color);
+    transform: translateY(1px);
 }
 
-.fa-chevron-up, .fa-chevron-right {
+.nav-arrow-right, .nav-arrow-up {
     display: none;
     margin-left: 5px;
-    color: var(--hero-color);
+    fill: var(--hover-to-hero-color);
 }
 
-.header-nav-bottom-menu:hover .fa-chevron-down {
+.header-nav-bottom-item:hover .nav-arrow-down {
     display: none;
 }
 
-.header-nav-bottom-menu:hover .fa-chevron-up {
+.header-nav-bottom-item:hover .nav-arrow-up {
     display: inline;
 }
 
-.hidden-subsubmenu-item:hover .fa-chevron-down {
+.hidden-subsubmenu-item:hover .nav-arrow-down-right {
     display: none;
 }
 
-.hidden-subsubmenu-item:hover .fa-chevron-right {
+.hidden-subsubmenu-item:hover .nav-arrow-right {
     display: inline;
 }
 
@@ -280,6 +281,7 @@ body {
     height: 20px;
     width: 0.5px;
     background-color: var(--light-grey-border-color);
+    margin: 18px;
 }
 
 .hidden-bottom-menu {
@@ -664,6 +666,7 @@ body {
     color: var(--white-color);
     font-size: 20px;
     font-weight: 300;
+    text-align: center;
     z-index: 2;
 }
 
@@ -863,6 +866,7 @@ body {
 .brand-text {
     margin-left: 20px;
     font-size: 28px;
+    white-space: nowrap;
 }
 
 .brand-images {
@@ -892,6 +896,7 @@ body {
 
 footer {
     background-color: var(--footer-color);
+    padding-top: 90px;
 }
 
 .footer-container {
@@ -901,7 +906,6 @@ footer {
 }
 
 .footer-menu {
-    padding-top: 90px;
     display: flex;
     justify-content: space-between;
     gap: 40px;
@@ -956,13 +960,12 @@ footer {
 /* Footer search bar */
 
 .footer-search {
-    margin-top: 60px;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
 }
 
 .footer-search-title {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .footer-search-wrapper {
