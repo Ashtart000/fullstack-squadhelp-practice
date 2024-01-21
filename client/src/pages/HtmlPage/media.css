@@ -59,6 +59,9 @@
         flex-direction: column;
         gap: 50px;
     }
+    .statictic-separator::after {
+        content: none;
+    }
 }
 
 @media (max-width: 1000px) {

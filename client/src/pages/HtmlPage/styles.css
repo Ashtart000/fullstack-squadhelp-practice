@@ -222,12 +222,71 @@ body {
 .header-nav-hamburger {
     display: none;
     margin: 0 10px;
+    cursor: pointer;
 }
 
 .header-nav-hamburger-icon {
     fill: var(--white-color);
     width: 25px;
     height: 25px;
+}
+
+.hamburger-login {
+    position: fixed;
+    z-index: 15;
+    border-top: 1px solid var(--light-grey-border-color);
+    box-shadow: -1px 4px 12px rgb(0, 0, 0, 0.25);
+    width: 100%;
+    bottom: 0px;
+    display: none;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 20px;
+    background-color: var(--white-color);
+}
+
+.hamburger-btn {
+    flex: 1;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 2px;
+}
+
+.hamburger-login-btn {
+    background-color: #efefef;
+}
+
+.hamburger-login-btn:hover {
+    color: var(--hover-to-hero-color);
+}
+
+.hamburger-sign-btn {
+    background-color: var(--hero-color);
+    color: var(--white-color);
+}
+
+.scroll {
+
+}
+
+.scroll-btn {
+    display: none;
+    background-color: var(--hero-color);
+    color: var(--white-color);
+    font-size: 12px;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    transition: 0.3s ease-out;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20;
+}
+
+.scroll-btn:hover {
+    opacity: 1;
 }
 
 /* HEADER NAV BOTTOM */

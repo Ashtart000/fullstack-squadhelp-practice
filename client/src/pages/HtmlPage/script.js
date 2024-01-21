@@ -103,11 +103,34 @@ questionsTitle.forEach((title, index) => {
 })
 
 
+// Scroll
+
+const scrollBtn = document.querySelector('.scroll-btn');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > window.innerHeight) {
+        scrollBtn.style.display = 'block';
+    }
+    else {
+        scrollBtn.style.display = 'none';
+    }
+});
+
+scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+})
+
+
+
 // Hamburger menu
 
 const hamburgerMenu = document.querySelector('.header-nav-hamburger');
 const headerNavBottom = document.querySelector('.header-nav-bottom');
 const heroSection = document.querySelector('.hero-section');
+const hamburgerLogin = document.querySelector('.hamburger-login');
 
 hamburgerMenu.addEventListener('click', () => {
     const computedStyle = window.getComputedStyle(headerNavBottom);
@@ -115,9 +138,12 @@ hamburgerMenu.addEventListener('click', () => {
     if(computedStyle.display === 'none') {
         headerNavBottom.style.display = 'flex';
         heroSection.style.display = 'none'; 
+        hamburgerLogin.style.display = 'flex';
+        scrollBtn.style.bottom = '60px';
     }
     else {
         headerNavBottom.style.display = 'none';
         heroSection.style.display = 'flex'; 
+        hamburgerLogin.style.display = 'none';
     } 
 })
