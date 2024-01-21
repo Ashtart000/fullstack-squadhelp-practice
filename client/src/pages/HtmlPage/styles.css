@@ -219,6 +219,16 @@ body {
     color: var(--hero-color);
 }
 
+.header-nav-hamburger {
+    display: none;
+    margin: 0 10px;
+}
+
+.header-nav-hamburger-icon {
+    fill: var(--white-color);
+    width: 25px;
+    height: 25px;
+}
 
 /* HEADER NAV BOTTOM */
 

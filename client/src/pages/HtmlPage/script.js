@@ -101,3 +101,23 @@ questionsTitle.forEach((title, index) => {
         }
     })  
 })
+
+
+// Hamburger menu
+
+const hamburgerMenu = document.querySelector('.header-nav-hamburger');
+const headerNavBottom = document.querySelector('.header-nav-bottom');
+const heroSection = document.querySelector('.hero-section');
+
+hamburgerMenu.addEventListener('click', () => {
+    const computedStyle = window.getComputedStyle(headerNavBottom);
+
+    if(computedStyle.display === 'none') {
+        headerNavBottom.style.display = 'flex';
+        heroSection.style.display = 'none'; 
+    }
+    else {
+        headerNavBottom.style.display = 'none';
+        heroSection.style.display = 'flex'; 
+    } 
+})
