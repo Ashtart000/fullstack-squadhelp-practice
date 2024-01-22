@@ -448,6 +448,10 @@ body {
     text-align: center;
 }
 
+.hero-section .hero-title-text {
+    text-align: start;
+}
+
 .main-button {
     background-color: var(--hero-color);
     color: var(--white-color);
@@ -488,6 +492,7 @@ body {
 .ways-title {
     font-size: 32px;
     text-align: center;
+    padding: 0 20px;
 }
 
 .ways-wrapper {
@@ -536,6 +541,10 @@ body {
     padding: 120px 0;
 }
 
+.how-work-section .hero-title-text {
+    text-align: start;
+}
+
 .how-work-wrapper {
     display: flex;
     justify-content: space-between;
@@ -576,7 +585,7 @@ body {
     flex: 9;
 }
 
-.how-work-numbers-item::before {
+.how-work-numbers-item::before, .how-work-numbers-item::after {
     content: '';
     height: 0.5px;
     width: 30px;
@@ -586,12 +595,8 @@ body {
 }
 
 .how-work-numbers-item::after {
-    content: '';
     height: 150%;
     width: 0.5px;
-    background-color: var(--light-grey-border-color);
-    position: absolute;
-    left: -50px;
 }
 
 .how-work-numbers-item:first-child:after {
@@ -731,6 +736,7 @@ body {
     color: #00dffc;
     font-size: 32px;
     font-weight: 600;
+    text-align: center;
 }
 
 .cta-text {
@@ -840,7 +846,7 @@ body {
 }
 
 .consultation-round-item {
-    width: 32px;
+    min-width: 32px;
     height: 32px;
     border-radius: 50%;
     background-color: rgba(55,125,255,.1);

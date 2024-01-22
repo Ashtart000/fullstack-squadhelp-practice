@@ -4,6 +4,37 @@
 --breakpoint-lg: 992px;
 --breakpoint-xl: 1200px; */
 
+
+@media (max-width: 640px) {
+    .search-bar {
+        display: none;
+    }
+    .brand-section {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+    .brand-images {
+        display: flex;
+        justify-content: start;
+    }
+    .brand-text {
+        margin-left: 35px;
+    }
+    .footer-search-wrapper {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 50px;
+    }
+    .statistic-text br {
+        display: none;
+    }
+    .number-text-1 {
+        margin-left: 10px;
+    }
+}
+
 @media (max-width: 768px) {
     .header-icons {
         gap: 30px;
@@ -100,6 +131,9 @@
         flex-direction: column;
         align-items: stretch;
     }
+    .question-title, .question-item-title {
+        margin-left: 15px;
+    }
     .consultation-section {
         flex-direction: column;
         align-items: stretch;
@@ -110,7 +144,6 @@
     .footer-container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 20px;
     }
     .footer-menu {
         flex-wrap: wrap;
@@ -177,5 +210,68 @@
     }
     .copyright-year {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-menu-list {
+        flex: 100%;
+    }
+    .how-work-numbers-item {
+        gap: 25px;
+        padding: 20px 25px;
+    }
+    .footer-copyright br {
+        display: none;
+    }
+    .number-text-1 {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .consultation-button {
+        font-size: 13px;
+        padding: 12px 18px;
+    }
+    .brand-images img {
+        margin:  15px 25px;
+    }
+    .footer-search-input {
+        font-size: 16px;
+    }
+    .how-work-numbers-item::before, .how-work-numbers-item::after {
+        left: -30px;
+    }
+    .how-work-wrapper {
+        margin-left: 30px;
+    }
+    .image-wrapper {
+        margin-left: -25px;
+    }
+    .header-icons {
+        gap: 10px;
+        margin: 0 0 0 10px;
+    }
+    .header-nav-hamburger {
+        margin: 0 0 0 10px;
+    }
+    .header-nav-top img {
+        width: 80%;
+    }
+    .ways-title {
+        font-size: 24px;
+    }
+    .hero-title-wrapper {
+        align-items: stretch;
+    }
+    .hero-title-button {
+        width: 100%;
+    }
+    .consultation-left {
+        padding: 70px 30px;
+    }
+    .consultation-right-item-wrapper {
+        padding: 70px 30px;
     }
 }

@@ -138,7 +138,7 @@ hamburgerMenu.addEventListener('click', () => {
     if(computedStyle.display === 'none') {
         headerNavBottom.style.display = 'flex';
         heroSection.style.display = 'none'; 
-        hamburgerLogin.style.display = 'flex';
+        hamburgerLogin.style.display = 'block';
         scrollBtn.style.bottom = '80px';
     }
     else {
