@@ -241,7 +241,7 @@ body {
     display: none;
     justify-content: space-between;
     gap: 15px;
-    padding: 15px 20px;
+    padding: 15px;
     background-color: var(--white-color);
 }
 
@@ -280,8 +280,8 @@ body {
     opacity: 0.5;
     transition: 0.3s ease-out;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     z-index: 20;
 }
 
@@ -445,6 +445,7 @@ body {
     color: var(--secondary-light-text-color);
     line-height: 1.7;
     margin-top: -3px;
+    text-align: center;
 }
 
 .main-button {
@@ -486,6 +487,7 @@ body {
 
 .ways-title {
     font-size: 32px;
+    text-align: center;
 }
 
 .ways-wrapper {
@@ -718,7 +720,7 @@ body {
 }
 
 .cta-text-wrapper {
-    padding: 40px 0;
+    padding: 40px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -736,13 +738,16 @@ body {
     font-size: 20px;
     font-weight: 300;
     text-align: center;
-    z-index: 2;
 }
 
 .cta-button {
     border-radius: 5px;
     color: var(--primary-text-color);
     background-color: var(--white-color);
+}
+
+.cta-title, .cta-text, .cta-button {
+    z-index: 2;
 }
 
 .cta-button:hover, .cta-button:focus {
@@ -979,6 +984,7 @@ footer {
     justify-content: space-between;
     gap: 40px;
     letter-spacing: 0.3px;
+    margin-bottom: 60px;
 }
 
 .footer-menu-list {
@@ -1087,8 +1093,8 @@ footer {
     flex: 0.95;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-right: 30px;
+    gap: 14px;
+    margin-right: 20px;
 }
 
 .footer-power-button {

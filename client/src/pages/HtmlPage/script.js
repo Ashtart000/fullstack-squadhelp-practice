@@ -139,11 +139,12 @@ hamburgerMenu.addEventListener('click', () => {
         headerNavBottom.style.display = 'flex';
         heroSection.style.display = 'none'; 
         hamburgerLogin.style.display = 'flex';
-        scrollBtn.style.bottom = '60px';
+        scrollBtn.style.bottom = '80px';
     }
     else {
         headerNavBottom.style.display = 'none';
         heroSection.style.display = 'flex'; 
         hamburgerLogin.style.display = 'none';
+        scrollBtn.style.bottom = '20px';
     } 
 })
