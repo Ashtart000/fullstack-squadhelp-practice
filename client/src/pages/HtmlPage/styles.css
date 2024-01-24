@@ -163,14 +163,6 @@ body {
     color: var(--hover-to-hero-color)
 }
 
-/* .header-icons-account:hover .hidden-account {
-    display: block;
-}
-
-.header-icons-contact:hover .hidden-contact {
-    display: block;
-} */
-
 .hidden-contact div {
     display: flex;
     align-items: center;
@@ -373,11 +365,6 @@ body {
     left: -260px;
     top: -20px;
 }
-
-/* .hidden-subsubmenu-item:hover .hidden-ideas {
-    display: block;
-    visibility: visible;
-} */
 
 
 /* MAIN */
