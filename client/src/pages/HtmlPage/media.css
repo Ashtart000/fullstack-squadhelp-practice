@@ -240,6 +240,11 @@
     .footer-search-input {
         font-size: 16px;
     }
+    .how-work-numbers-item {
+        gap: 15px;
+        padding: 20px 25px;
+        position: relative;
+    }
     .how-work-numbers-item::before, .how-work-numbers-item::after {
         left: -30px;
     }

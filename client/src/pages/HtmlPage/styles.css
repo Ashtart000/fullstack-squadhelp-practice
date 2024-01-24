@@ -55,7 +55,6 @@ body {
 
 .search-bar {
     align-items: center;
-    /* width: 310px; */
     flex: 1;
     padding: 0 12px;
     margin: 0 48px;
@@ -107,10 +106,6 @@ body {
 .header-icons-favorite:hover .heart-icon {
     color: var(--white-color);
 }
-
-/* .fa-user, .fa-phone, .fa-heart {
-    font-size: 14px;
-} */
 
 .user-icon, .phone-icon, .heart-icon {
     color: var(--light-menu-item-color);
@@ -192,19 +187,6 @@ body {
     margin-left: 15px;
 }
 
-/* .hidden-contact i {
-    color: var(--light-grey-color);
-    font-size: 18px;
-}
-
-.hidden-contact i:hover {
-    color: var(--hero-color);
-}
-
-.hidden-contact i:hover + a {
-    color: var(--hero-color);
-} */
-
 .hidden-icon {
     color: var(--light-grey-color);
     width: 20px;
@@ -263,10 +245,6 @@ body {
 .hamburger-sign-btn {
     background-color: var(--hero-color);
     color: var(--white-color);
-}
-
-.scroll {
-
 }
 
 .scroll-btn {
@@ -643,10 +621,6 @@ body {
     flex: 4;
 }
 
-.question-list {
-
-}
-
 .question-separator {
     height: 0.5px;
     width: 100%;
@@ -895,7 +869,7 @@ body {
     font-size: 24px;
 }
 
-.concultation-right {
+.consultation-right {
     flex: 2.6;
     background-color: var(--hero-color);
     color: var(--white-color);
