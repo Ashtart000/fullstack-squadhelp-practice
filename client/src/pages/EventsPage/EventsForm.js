@@ -6,7 +6,7 @@ import Schems from '../../validators/validationSchems';
 import styles from './EventsForm.module.scss'
 
 const EventsForm = (props) => {
-    const { events, addEvent} = props;
+    const { addEvent } = props;
 
     const initialValues = {
         eventName: '',
@@ -65,12 +65,8 @@ const EventsForm = (props) => {
     );
 }
 
-const mapStateToProps = (state) => ({
-    events: state.eventStore.events,
-});
-
 const mapDispatchToProps = (dispatch) => ({
     addEvent: (data) => dispatch(addEvent(data))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(EventsForm);
+export default connect(null, mapDispatchToProps)(EventsForm);

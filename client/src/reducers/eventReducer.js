@@ -4,7 +4,7 @@ const initialState = {
     events: []
 };
 
-export default function (state = initialState, action) {
+const eventReducer = (state = initialState, action) => {
     switch(action.type) {
         case ACTION.ADD_EVENT: {
             return {
@@ -21,4 +21,6 @@ export default function (state = initialState, action) {
         default:
             return state;
     }
-}
+};
+
+export default eventReducer;

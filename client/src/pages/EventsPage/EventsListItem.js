@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useMemo} from 'react';
 import { toast } from 'react-toastify';
 import styles from './EventsListItem.module.scss';
-import { calculateFillWidth, calculateRemainingValues, calculateRemainingWidthInHours, calculateRemainingWidthInMinutes } from './calculateTimeUtils';
+import { calculateFillWidth, calculateRemainingValues, calculateRemainingWidthInHours } from './calculateTimeUtils';
 
 const EventsListItem = (props) => {
     const {event, onDelete} = props;
@@ -35,9 +35,7 @@ const EventsListItem = (props) => {
 
     const [days, hours, minutes, seconds] = calculateRemainingValues(remainingTime);
 
-    //max 100h or 100m
     const remainingWidhtInHours = calculateRemainingWidthInHours(remainingTime);
-    const remainingWidhtInMinutes = calculateRemainingWidthInMinutes(remainingTime);
 
     const fillWidth = calculateFillWidth(remainingWidhtInHours);
 

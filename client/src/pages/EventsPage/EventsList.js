@@ -27,7 +27,7 @@ const EventsList = (props) => {
                 <h2>Live upcomming checks</h2>
                 <div className={styles.eventTitleClock}>
                     <p>Remaining time</p>
-                    <i class="far fa-clock"></i>
+                    <i className="far fa-clock"></i>
                 </div>
             </div>          
             <div className={styles.eventListItemContainer}>

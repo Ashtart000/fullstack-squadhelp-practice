@@ -7,6 +7,8 @@ export const calculateRemainingValues = (remainingTime) => {
     return [days, hours, minutes, seconds];
 };
 
+// RemainingWidth max 100h or 100m
+
 export const calculateRemainingWidthInHours = (remainingTime) => {
     return Math.ceil(remainingTime / (1000 * 60 * 60));
 };
