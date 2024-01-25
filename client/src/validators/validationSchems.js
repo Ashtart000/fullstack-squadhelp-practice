@@ -68,8 +68,8 @@ export default {
   }),
   EventSchema: yup.object({
     eventName: yup.string().min(3, 'min 3 symbols').required('required'),
-    eventDate: yup.date().required('required').min(new Date(), 'must be greater than the current date'),
+    eventDate: yup.date().required('required').min(new Date(new Date().setHours(0, 0, 0, 0)), 'must be greater than or equal to the current date'),
     eventTime: yup.mixed().required('required'),
     eventNotifyIn: yup.number().min(1, '1 minute minimum').max(30240, '30240 minutes maximum').required('required'),
-  })
+  })  
 };

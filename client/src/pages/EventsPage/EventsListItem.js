@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { toast } from 'react-toastify';
 import styles from './EventsListItem.module.scss';
+import { calculateFillWidth, calculateRemainingValues, calculateRemainingWidthInHours, calculateRemainingWidthInMinutes } from './calculateTimeUtils';
 
 const EventsListItem = (props) => {
     const {event, onDelete} = props;
@@ -13,18 +14,7 @@ const EventsListItem = (props) => {
             setRemainingTime(eventEndTime - new Date())
         }, 1000);
         return () => clearInterval(timer);
-    }, [eventEndTime])
-
-    const remainingValues = (remainingTime) => {
-        const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-      
-        return [days, hours, minutes, seconds];
-    }
-
-    const [days, hours, minutes, seconds] = remainingValues(remainingTime);
+    }, [eventEndTime]);
 
     const timeToNotice = Math.max(remainingTime - (event.notifyIn * 60 * 1000), 0);
 
@@ -41,11 +31,13 @@ const EventsListItem = (props) => {
         }
     }, [timeToNotice, event.name]);
 
-    //max 100h or 100m
-    const remainingWidhtInHours = Math.ceil(remainingTime / (1000 * 60 * 60));
-    // const remainingWidhtInMinutes = Math.ceil(remainingTime / (1000 * 60)) > 100 ? 100 : Math.ceil(remainingTime / (1000 * 60))
+    const [days, hours, minutes, seconds] = calculateRemainingValues(remainingTime);
 
-    const fillWidth = `${100 - remainingWidhtInHours}%`;
+    //max 100h or 100m
+    const remainingWidhtInHours = calculateRemainingWidthInHours(remainingTime);
+    const remainingWidhtInMinutes = calculateRemainingWidthInMinutes(remainingTime);
+
+    const fillWidth = calculateFillWidth(remainingWidhtInMinutes);
 
     return (
         <div className={styles.eventListItem}>
