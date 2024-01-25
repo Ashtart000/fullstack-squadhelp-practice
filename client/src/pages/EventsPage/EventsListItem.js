@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 import { toast } from 'react-toastify';
 import styles from './EventsListItem.module.scss';
 import { calculateFillWidth, calculateRemainingValues, calculateRemainingWidthInHours, calculateRemainingWidthInMinutes } from './calculateTimeUtils';
@@ -6,7 +6,9 @@ import { calculateFillWidth, calculateRemainingValues, calculateRemainingWidthIn
 const EventsListItem = (props) => {
     const {event, onDelete} = props;
 
-    const eventEndTime = new Date(`${event.date} ${event.time}`);
+    const eventEndTime = useMemo(() => 
+        new Date(`${event.date} ${event.time}`), [event.date, event.time]);
+
     const [remainingTime, setRemainingTime] = useState(eventEndTime - new Date())
 
     useEffect(() => {
@@ -37,7 +39,7 @@ const EventsListItem = (props) => {
     const remainingWidhtInHours = calculateRemainingWidthInHours(remainingTime);
     const remainingWidhtInMinutes = calculateRemainingWidthInMinutes(remainingTime);
 
-    const fillWidth = calculateFillWidth(remainingWidhtInMinutes);
+    const fillWidth = calculateFillWidth(remainingWidhtInHours);
 
     return (
         <div className={styles.eventListItem}>
