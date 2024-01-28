@@ -1,0 +1,13 @@
+db.messages.aggregate([
+  {
+    $match: {
+      body: { $regex: 'паровоз', $options: 'i' }
+    }
+  },
+  {
+    $group: {
+      _id: null,
+      total: { $sum: 1 }
+    }
+  }
+])
